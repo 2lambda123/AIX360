@@ -51,7 +51,7 @@ class Glove:
 
             for i in range(self._vocab_size):
                 # word, .. vals ...
-                line = f.readline().strip().split()
+                line = f.readline(5_000_000).strip().split()
                 self._vocab[line[0]] = i
                 self._embeddings[
                     i

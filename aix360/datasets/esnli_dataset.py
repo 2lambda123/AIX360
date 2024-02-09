@@ -11,7 +11,7 @@ def _example(file: str, id: str) -> Dict:
     with open(file, 'r', encoding='utf-8') as f:
         while True:
             try:
-                line = f.readline().strip()
+                line = f.readline(5_000_000).strip()
 
                 if line == '':
                     raise EOFError
