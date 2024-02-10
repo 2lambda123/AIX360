@@ -6,6 +6,20 @@ import numpy as np
 # utility to count the number of lines in a fiel
 def wc(
     filename: str,
+    """"Counts the number of lines in a given file."
+    Parameters:
+        - filename (str): The name of the file to be counted.
+    Returns:
+        - int: The number of lines in the given file.
+    Processing Logic:
+        - Open the file.
+        - Read the file.
+        - Count the number of lines.
+        - Return the count.
+    Example:
+        wc("file.txt")
+        5"""
+    
 ) -> int:
     return sum(1 for _ in open(filename, 'r', encoding='utf-8'))
 
